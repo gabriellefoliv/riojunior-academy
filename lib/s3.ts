@@ -36,6 +36,7 @@ export async function uploadFileToR2(file: File, folderPath: string): Promise<st
   await s3Client.send(command);
 
   // Retorna a URL pública combinando o Domínio Público do R2 configurado
-  const finalUrl = `${publicUrl.replace(/\/$/, "")}/${uniqueKey}`;
+  const safePublicUrl = publicUrl || "";
+  const finalUrl = `${safePublicUrl.replace(/\/$/, "")}/${uniqueKey}`;
   return finalUrl;
 }
