@@ -60,7 +60,7 @@ export default async function AdminAulasPage({ params }: { params: Promise<{ id:
             </tr>
           </thead>
           <tbody>
-            {moduleData.lessons.map((lesson) => (
+            {moduleData.lessons.map((lesson: any) => (
               <tr key={lesson.id} className="border-b border-border/50 hover:bg-white/5 transition-colors">
                 <td className="p-4">
                   <div className="text-white font-medium">{lesson.title}</div>
