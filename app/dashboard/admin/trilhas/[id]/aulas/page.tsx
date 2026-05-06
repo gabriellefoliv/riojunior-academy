@@ -68,7 +68,9 @@ export default async function AdminAulasPage({ params }: { params: Promise<{ id:
                 </td>
                 <td className="p-4 text-center">
                   {lesson.videoUrl ? (
-                    <Video className="w-4 h-4 text-primary mx-auto" title="Possui Vídeo" />
+                    <span title="Possui Vídeo">
+                      <Video className="w-4 h-4 text-primary mx-auto" />
+                    </span>
                   ) : (
                     <span className="text-slate-600">-</span>
                   )}
