@@ -1,14 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617; /* slate-950 - deep space background */
-  --foreground: #f8fafc; /* slate-50 */
-  --primary: #8b5cf6; /* violet-500 - space purple */
-  --primary-glow: rgba(139, 92, 246, 0.5);
-  --secondary: #3b82f6; /* blue-500 - space blue */
-  --secondary-glow: rgba(59, 130, 246, 0.5);
-  --accent: #0f172a; /* slate-900 */
-  --border: #1e293b; /* slate-800 */
+  /* Rocketseat Dark Theme Base */
+  --background: #121214;
+  --foreground: #E1E1E6;
+  --accent: #202024;
+  --border: #323238;
+  
+  /* Rocketseat Purple (Primary Vibe) */
+  --primary: #8257E5; 
+  --primary-glow: rgba(130, 87, 229, 0.5);
+  
+  /* RioJunior Identity (Subtle Touches) */
+  --secondary: #B1D149; /* RJ Green */
+  --secondary-glow: rgba(177, 209, 73, 0.4);
+  
+  --tertiary: #0073B1; /* RJ Blue */
+  --tertiary-glow: rgba(0, 115, 177, 0.4);
 }
 
 @theme inline {
@@ -18,6 +26,8 @@
   --color-primary-glow: var(--primary-glow);
   --color-secondary: var(--secondary);
   --color-secondary-glow: var(--secondary-glow);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-glow: var(--tertiary-glow);
   --color-accent: var(--accent);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
@@ -28,9 +38,11 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  /* Add a subtle radial gradient for the space feel */
-  background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 100%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  /* Ambient dark space vibe mixing Rocketseat Purple with RJ Blue and RJ Green */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(130, 87, 229, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(0, 115, 177, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(177, 209, 73, 0.03) 0%, transparent 50%);
   background-attachment: fixed;
   min-height: 100vh;
 }

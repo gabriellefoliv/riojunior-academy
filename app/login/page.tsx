@@ -45,15 +45,16 @@ export default function LoginPage() {
       <div className="w-full max-w-md z-10">
         <div className="bg-accent/40 border border-white/5 p-8 rounded-3xl backdrop-blur-md shadow-2xl border-glow">
           <div className="flex flex-col items-center mb-8">
-            <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center border border-primary/50 mb-6 glow-primary">
-              <Rocket className="w-8 h-8 text-primary" />
+            <div className="text-center mb-8">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src="/logo-branca-rj.png" 
+                  alt="RioJunior" 
+                  className="h-16 w-auto object-contain drop-shadow-[0_0_15px_rgba(130,87,229,0.3)]" 
+                />
+              </div>
+              <p className="text-slate-400">Entre para acessar a plataforma.</p>
             </div>
-            <h1 className="text-3xl font-bold text-white tracking-tight mb-2">
-              Bem-vindo à <span className="text-primary">Academy</span>
-            </h1>
-            <p className="text-slate-400 text-center text-sm">
-              Faça login com a conta da sua Empresa Júnior para acessar os conteúdos.
-            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">

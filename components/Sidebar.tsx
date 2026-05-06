@@ -52,10 +52,12 @@ export function Sidebar({ userRole }: SidebarProps) {
 
   return (
     <aside className="w-64 bg-accent/30 border-r border-border backdrop-blur-md hidden md:flex flex-col h-full">
-      <div className="p-6 shrink-0">
-        <h2 className="text-xl font-bold text-white tracking-tight">
-          RioJunior <span className="text-primary glow-primary">Academy</span>
-        </h2>
+      <div className="p-6 shrink-0 flex items-center justify-center">
+        <img 
+          src="/logo-branca-rj.png" 
+          alt="RioJunior Logo" 
+          className="h-10 w-auto object-contain drop-shadow-[0_0_8px_rgba(130,87,229,0.5)]" 
+        />
       </div>
 
       <div className="flex-1 overflow-y-auto custom-scrollbar">
