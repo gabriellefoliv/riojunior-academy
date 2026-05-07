@@ -40,13 +40,13 @@ export default async function ModulePage({
   if (lessons.length === 0) return <div>Nenhuma aula cadastrada nesta trilha.</div>;
 
   const activeLessonId = resolvedSearchParams.lessonId || lessons[0].id;
-  const activeLessonIndex = lessons.findIndex(l => l.id === activeLessonId);
+  const activeLessonIndex = lessons.findIndex((l: any) => l.id === activeLessonId);
   const activeLesson = lessons[activeLessonIndex] || lessons[0];
 
   const nextLessonId = activeLessonIndex < lessons.length - 1 ? lessons[activeLessonIndex + 1].id : undefined;
   const isCompleted = activeLesson.progress.length > 0 && activeLesson.progress[0].completed;
 
-  const completedCount = lessons.filter(l => l.progress.some(p => p.completed)).length;
+  const completedCount = lessons.filter((l: any) => l.progress.some((p: any) => p.completed)).length;
   const progressPercent = Math.round((completedCount / lessons.length) * 100);
 
   return (
@@ -67,9 +67,9 @@ export default async function ModulePage({
         </div>
 
         <div className="flex-1 overflow-y-auto custom-scrollbar p-4 space-y-2">
-          {lessons.map((lesson, idx) => {
+          {lessons.map((lesson: any, idx: number) => {
             const isActive = lesson.id === activeLesson.id;
-            const completed = lesson.progress.some(p => p.completed);
+            const completed = lesson.progress.some((p: any) => p.completed);
 
             return (
               <Link
