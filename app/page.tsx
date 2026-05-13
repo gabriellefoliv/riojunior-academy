@@ -9,10 +9,10 @@ export default function WelcomePage() {
         <div className="relative inline-flex items-center justify-center">
           <div className="absolute inset-0 bg-primary/30 blur-2xl rounded-full scale-150"></div>
           <div className="relative bg-accent/50 border border-white/10 p-6 rounded-2xl backdrop-blur-sm border-glow">
-            <img 
-              src="/logo-branca-rj.png" 
-              alt="RioJunior Logo" 
-              className="h-20 w-auto object-contain drop-shadow-[0_0_15px_rgba(130,87,229,0.5)]" 
+            <img
+              src="/logo-branca-rj.png"
+              alt="RioJunior Logo"
+              className="h-20 w-auto object-contain drop-shadow-[0_0_15px_rgba(130,87,229,0.5)]"
             />
           </div>
         </div>
@@ -21,15 +21,15 @@ export default function WelcomePage() {
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-sm">
             RioJunior <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Academy</span>
           </h1>
-          <p className="text-xl sm:text-2xl font-light text-slate-300 italic tracking-wide opacity-80">
+          {/* <p className="text-xl sm:text-2xl font-light text-slate-300 italic tracking-wide opacity-80">
             "A coragem de sonhar e a ousadia de agir"
-          </p>
+          </p> */}
         </div>
 
-        <p className="text-lg text-slate-400 max-w-xl">
+        {/* <p className="text-lg text-slate-400 max-w-xl">
           A plataforma educacional definitiva para o desenvolvimento de Empresas Juniores.
           Acesse conteúdos exclusivos e impulsione os resultados da sua EJ.
-        </p>
+        </p> */}
 
         <div className="pt-8">
           <Link
